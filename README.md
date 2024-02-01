@@ -2,6 +2,8 @@
 
 This project is a React-based Tic Tac Toe game where two players can play against each other by taking turns to mark Xs and Os on a 3x3 grid. The application is built using JavaScript, with styling provided by CSS and the React framework for UI components.
 
+This application has been deployed with Render:
+[Tic-Tac-Toe](https://tic-tac-toke.onrender.com)  
 ## Getting Started
 
 Follow these instructions to get the game running on your local machine.
@@ -19,7 +21,7 @@ clone the repository to your device:
 
 ### Deployment
 This application has been deployed with Render:
-[Tic-Tac-Toe]()  
+[Tic-Tac-Toe](https://tic-tac-toke.onrender.com)  
 
 To deploy this application locally, first cd into the directory
 
