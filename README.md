@@ -1,134 +1,41 @@
-# ❌ ⭕️ Tic Tac Toe
+# ❌ ⭕️ Tic Tac Toe Game
 
-Take a puff and pass to: https://tic-tac-toke.onrender.com
+This project is a React-based Tic Tac Toe game where two players can play against each other by taking turns to mark Xs and Os on a 3x3 grid. The application is built using JavaScript, with styling provided by CSS and the React framework for UI components.
 
-#### Overview
+## Getting Started
 
-Tic Tac Toe is a classic children's game involving two players alternatively marking squares on a three-by-three grid. While the game play can be considered relatively simple for humans, creating the logic in code is considerably more challenging.
+Follow these instructions to get the game running on your local machine.
 
-#### Learning Objectives
+### Prerequisites
 
-- can create a logic component to handle the gameplay
-- can pass data and behavior from a parent component to a nested component with props
-- can effectively work within a team to achieve a desired outcome
+- Yarn 1.22.21
+  
+        npm install --global yarn
 
-#### Additional Resources
+### Installation
+clone the repository to your device:
 
-- [Tic Tac Toe](https://en.wikipedia.org/wiki/Tic-tac-toe)
-- [Render](https://render.com/docs/deploy-create-react-app)
+    $git clone https://github.com/your_username/React-Tic-Tac-Toe.git
 
-#### Process
+### Deployment
+This application has been deployed with Render:
+[Tic-Tac-Toe]()  
 
-- One person on the team accepts the group assignment from GitHub classroom
-- Create a team name
-- Add additional team members via their GitHub handle
-- Clone the newly created repository
-- `cd` into the repository
-- Run $ `yarn` to install the React dependencies
-- Create a new branch following the naming instructions described below
-- Open the repository in a text editor
-- Code!
+To deploy this application locally, first cd into the directory
 
-#### Useful Commands
+        $cd Tic-Tac-Toe
+run yarn to install dependencies
+        
+        $yarn
+run yarn start to start the localhost:3000 server
 
-- $ `yarn start`
-- control + c (stops the server)
-- command + t (opens a new terminal tab)
+        $yarn start
+Open http://localhost:3000 to view it in the browser.
 
-#### Troubleshooting Tips
+### License
+This project is licensed under the MIT License - see [LICENSE](https://opensource.org/license/mit/) for details.
 
-- Is your server running?
-- Are your components exported?
-- Inspect the page and look for errors in the console tab.
-- Always look at the first error message in the list.
+### Acknowledgments
+- Inspiration from classic Tic Tac Toe games
+- React documentation and community
 
----
-
-### Tic Tac Toe
-
-This is a web game for two players who are taking turns on one device. You will have to use the component state to keep track of whose turn it is and which squares have been marked by each player. This project will challenge your knowledge of React as well as be an exercise in creating good user experiences.
-
-When creating a project, it is important to think about the organization of your code. It is best practice to separate and compartmentalize all the actions in your code. The square UI will be in its own component. `App.js` controls all of the data in state, renders the other components, and performs the game logic.
-
-### Win Condition
-
-The win condition is one of the most challenging aspects of coding Tic Tac Toe. Take some time with your team to discuss the different possibilities. Defining the logic by writing it out in regular English words can be helpful.
-
-There is an interesting approach to the [Tic Tac Toe win condition in React](https://forum.freecodecamp.org/t/need-help-understanding-react-tic-tac-toe-winner-function/137840) here. However, this code should NOT be used as is. It must be refactored. The tools used in this example are not current best practices in React. It is provided here as inspiration.
-
----
-
-### 📚 User Stories
-
-- As a user, I can see a three by three grid game board on the page.
-# branch: board
-### mapped over the array of boxes in App.js to create 9 boxes
-### passed the props over to Square.js
-### styled the boxes to create a 3x3 grid for the board
-
-- As a user, I can click on a square to mark it.
-# branch: square-click
-### created the handleSquareClick function in App.js to mark the board with an "⭕"
-### created a handleClick function in Sqaure.js that takes in a handleSquareClick function to operate the click event
-### styled the font size and centered the text in each box
-
-- As a user, my partner can click on a square after me and see their mark.
-# branch: square-click-2
-### created a state variable for a number count to have a unique symbol for each players click
-### used conditional statements to determine the amount of clicks and decide which symbol will populate in each square.
-### ended the conditional to alert "Game Over!" when all sqaures are full
-
-- As a user, I can't click on a square that has already been marked.
-# branch: marked-square
-### added a conditional statement in Square.js to the handleClick function that only calls on the handleSquareClick function from App.js if the square is empty.
-
-- As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally), I can see a notice telling me which player won.
-# branch: winner
-### created a function to checkForWin in App.js that checs  winning conditions (horizontally, vertically, or diagonally) and sets a message to announce a winner.
-### created a state variable for the message to change when a player has won
-### called the checkForWin function in the handleSquareClick function to check for a winner after each click.
-
-- As a user, I can't play the game after the game has been won.
-# branch: endgame
-### created a state variable to check isGameOver and set it to true.
-### included the conditional statement to check if isGameOver was set to false and updated the square to return null.
-### set the isGameOver to true if the function checkForWin condition was met.
-
-- As a user, if no more squares are available, I can see a notice telling me that the game has ended.
-# branch: full-board-endgame
-### created a state variable isBoardFull set to true
-### created a function to determine if the board is full by iterating through each individual square. if it was, then the set state remains true, if not the set state is false
-### called the checkFullBoard function on the last play to determine if the game is over via full board or a winner.
-
-- As a user, I can click on a restart button that will clear the game board.
-# branch: button
-### added a button with "restart" in it.
-### created a variable to restart the game that sets the state back to original board
-## called the function in the button in the return
-
-### 🏔 Stretch Goals
-
-- As a user, I can see pleasant stylings on the application.
-- As a user, I can see a notification that informs me whether it is currently my partner or my turn.
-# branch: player-turn
-### changed message to read "player 1 turn"
-### set message after each turn to toggle from player 1 turn to player 2 turn based on the count
-
-- As a user, I can choose my marker from a predetermined list (X, O, a color, an emoji, etc...).
-
-### 👩‍💻 Developer Stretch Goals
-
-- As a developer, I have a well-commented application.
-- As a developer, I have a well-written README file with instructions on accessing my repository.
-- As a developer, my variables are all named semantically.
-- As a developer, I have refactored and efficient code.
-- As a developer, I have my application [deployed as a live website](https://render.com/docs/deploy-create-react-app).
-
-### 🎙 Project Demos
-
-Each team will give a brief (three minute) presentation of their application. Presenting your project will allow you to practice communication and coding vocabulary. Presentations are not a judgement of your work or ability as each team will have different weaknesses and strengths. Presentations allow other members of the cohort to appreciate a different approach to solving a complex problem.
-
-- Full team: show off your application's user interface (UI)
-- First team member: What was the biggest learning moment for your team?
-- Second team member: What was the most challenging thing about this project?
-- Third team member (if applicable): How did you manage the workflow in a group of three?
